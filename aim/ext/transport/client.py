@@ -239,7 +239,7 @@ class Client:
         if response.status == rpc_messages.ReleaseResourceResponse.Status.ERROR:
             raise_exception(response.exception)
 
-        del self._resource_pool[resource_handler]
+        # del self._resource_pool[resource_handler]
 
     def run_instruction(self, queue_id, resource, method, args=(), is_write_only=False):
         args = deepcopy(args)
